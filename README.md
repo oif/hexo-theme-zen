@@ -61,6 +61,14 @@ symbols_count_time:
 
 For more details about those parameters see [Usage](https://github.com/theme-next/hexo-symbols-count-time#usage)
 
+#### Nav
+
+To add pages or links in header add some config like below in `_config.yml`
+
+```
+menu:
+  about: /about
+```
 
 #### Theme
 

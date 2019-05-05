@@ -3,8 +3,12 @@
     <div class="brand">
       <a href="/"><%- config.title %></a>
     </div>
+    <% if(config.menu) { %>
     <div class="nav right">
-      <a href="/me">About</a>
+      <% Object.keys(config.menu).forEach(function(name) { %>
+      <a href="<%-config.menu[name]%>"><%-name%></a>
+      <% }) %>
     </div>
+    <% } %>
   </div>
 </header>
