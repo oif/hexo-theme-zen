@@ -3,8 +3,9 @@
     <%= entry.title %></a>
   <div class="meta">
     <time class="time" datetime="<%= date_xml(entry.date) %>" itemprop="datePublished">
-      <%= date(entry.date, "MMM D, YYYY") %></time> ·
+      <%= date(entry.date, "MMM D, YYYY") %></time>
     <% if (entry.tags && entry.tags.length){ %>
+    ·
     <%- list_tags(entry.tags, {
           show_count: false,
           style: 'none',
