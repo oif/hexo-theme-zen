@@ -65,3 +65,9 @@ For more details about those parameters see [Usage](https://github.com/theme-nex
 #### Theme
 
 Set `theme` to `zen` in `_config.yml` to enable Zen theme
+
+## Thanks
+
+- [BootCDN](https://www.bootcdn.cn/): CSS/JS Lib
+- [LUG@USTC](https://lug.ustc.edu.cn): Google Fonts Mirror
+
