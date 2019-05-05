@@ -60,3 +60,8 @@ symbols_count_time:
 ```
 
 For more details about those parameters see [Usage](https://github.com/theme-next/hexo-symbols-count-time#usage)
+
+
+#### Theme
+
+Set `theme` to `zen` in `_config.yml` to enable Zen theme
