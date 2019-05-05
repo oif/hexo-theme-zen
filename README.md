@@ -2,7 +2,7 @@
 
 A lean Hexo theme.
 
-- [Preview](https://ix.rw)
+![Preview](https://i.loli.net/2019/05/05/5cce583fadaa3.png)
 
 ## Installation
 
