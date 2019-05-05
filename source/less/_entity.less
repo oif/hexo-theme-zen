@@ -1,0 +1,37 @@
+.entity {
+  .title {
+    font-family: @title-font-family;
+    font-size: @large-size;
+    line-height: 3rem;
+    font-weight: bolder;
+    color: @main-color;
+
+    &:hover {
+      color: @alt-color;
+    }
+  }
+
+  .meta {
+    color: @light-color;
+    font-size: .7rem;
+    margin: 0.5rem 0;
+
+    .tag-link {
+      color: @light-color;
+
+      &:hover {
+        color: @alt-color;
+      }
+    }
+  }
+
+  .excerpt {
+    margin-bottom: 3.2rem;
+    font-size: @small-size;
+    line-height: 1.3rem;
+  }
+
+  .content {
+    @import "_markdown.less";
+  }
+}

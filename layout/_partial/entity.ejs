@@ -1,0 +1,37 @@
+<div class="entity">
+  <a class="title" href="<%- url_for(entry.path) %>">
+    <%= entry.title %></a>
+  <div class="meta">
+    <time class="time" datetime="<%= date_xml(entry.date) %>" itemprop="datePublished">
+      <%= date(entry.date, "MMM D, YYYY") %></time> ·
+    <% if (entry.tags && entry.tags.length){ %>
+    <%- list_tags(entry.tags, {
+          show_count: false,
+          style: 'none',
+          separator: ' / '
+        }) %>
+    <% } %>
+    <% if (config.symbols_count_time) { %>
+    · <%-symbolsTime(entry, config.symbols_count_time.awl, config.symbols_count_time.wpm, config.symbols_count_time.suffix)%>
+    <% } %>
+  </div>
+  <% if (is_post()) { %>
+  <div class="content" itemprop="articleBody">
+    <%- entry.content %>
+  </div>
+  <% if (post.comments && config.disqus_shortname){ %>
+  <section id="comments" class="white-box">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+  <% } %>
+  <% }else{ %>
+  <div class="excerpt">
+    <p href="<%- url_for(entry.path) %>">
+      <%- entry.excerpt %>
+      <a class="readmore" href="<%- url_for(entry.path) %>" title="继续阅读「<%= entry.title %>」"><span>继续阅读</span></a>
+    </p>
+  </div>
+  <% } %>
+</div>

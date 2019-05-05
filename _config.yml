@@ -1,0 +1,9 @@
+# Meta
+description: A lean Hexo Theme
+keywords: zen, pure, lean
+
+# Less
+less:
+  compress: true
+
+favicon: /favicon.png

@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="page-header">
+    <% if (is_tag()) { %>
+    - <%= page.tag %> -
+    <% } %>
+  </div>
+
+  <ul class="list-nostyle">
+    <% page.posts.each(function(entry){ %>
+    <li>
+      <%- partial('entity', {entry: entry}) %>
+    </li>
+    <% }) %>
+  </ul>
+
+  <% if (page.total > 1){ %>
+  <nav id="page-nav">
+    <%- paginator({
+        prev_text: 'Prev',
+        next_text: 'Next'
+      }) %>
+  </nav>
+  <% } %>
+</div>

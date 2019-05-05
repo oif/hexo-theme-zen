@@ -1,0 +1,41 @@
+<%
+var title = page.title;
+if (is_archive()) {
+  title = 'Archives';
+  if (is_month())
+    title += ': ' + page.year + '/' + page.month;
+  else if (is_year())
+    title += ': ' + page.year;
+}
+else if (is_category())
+  title = 'Category: ' + page.category;
+else if (is_tag())
+  title = 'Tag: ' + page.tag;
+%>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="keywords" content="<%- config.keywords %>">
+  <meta name="description" content="<%- config.description %>">
+
+  <link rel="icon" href="<%- theme.favicon %>">
+  <% if (theme.rss) { %>
+  <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+
+  <title>
+    <% if (title) { %>
+    <%= title %> |
+    <% } %>
+    <%= config.title %>
+  </title>
+  <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+  <link href="https://fonts.proxy.ustclug.org/css?family=Ubuntu:700" rel="stylesheet">
+  <%- css('dracula.css?v='+ Math.round(new Date().getTime()/1000)) %>
+  <%- css('style.css?v='+ Math.round(new Date().getTime()/1000)) %>
+
+
+</head>
