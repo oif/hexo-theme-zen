@@ -13,8 +13,7 @@
 
   .meta {
     color: @light-color;
-    font-size: .7rem;
-    margin: 0.5rem 0;
+    font-size: 0.7rem;
 
     .tag-link {
       color: @light-color;
@@ -27,11 +26,14 @@
 
   .excerpt {
     margin-bottom: 3.2rem;
-    font-size: @small-size;
-    line-height: 1.3rem;
   }
 
   .content {
+    padding-top: 2.7rem;
     @import "_markdown.less";
+
+    p {
+      // color: #4a4a4a;
+    }
   }
 }

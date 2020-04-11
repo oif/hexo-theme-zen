@@ -24,15 +24,19 @@ h3,
 h4,
 h5 {
   line-height: 120%;
-  margin: 1rem 0;
+  margin: 4rem 0 1rem;
 }
 
 p {
-  code,
-  kbd,
-  samp {
-    color: @alt-color;
-    padding: 2px;
+  code {
+    border: 1px solid #dee2e6;
+    font-size: @small-size;
+    padding: 3px 10px;
+    border-radius: 3px;
+    white-space: nowrap;
+    font-weight: 700;
+    font-family: inherit;
+    -webkit-font-smoothing: antialiased;
   }
 }
 
@@ -52,8 +56,21 @@ a {
   }
 }
 
-li::before {
-  color: @alt-color;
+ul, ol {
+  margin: 1.5rem 0 1.5rem 0;
+  li {
+    margin-left: 1rem;
+    list-style: none;
+
+    &::before {
+      content: "•";
+      margin-right: .5rem;
+    }
+
+    &::marker {
+      display: none;
+    }
+  }
 }
 
 blockquote {
@@ -67,4 +84,6 @@ blockquote {
 
 .hljs {
   border-radius: 3px;
+  font-size: 0.9rem;
+  line-height: 1.6rem;
 }

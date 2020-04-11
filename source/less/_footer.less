@@ -1,9 +1,26 @@
-footer, footer a {
+footer {
   font-family: @base-font-family;
-  color: @main-color;
-  padding: 3rem 0;
+  color: @gray;
+  padding: 10rem 0;
   line-height: 1.2rem;
-  font-size: .7rem;
+  font-size: 0.8rem;
   text-align: center;
-  font-weight: bolder;
+
+  a {
+    color: @gray;
+
+    &::after {
+      display: inline-block;
+      content: "·";
+      margin: 0 .25rem;
+    }
+
+    &:hover {
+      color: @main-color;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
 }
